@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mocha | Taste the Extraordinary</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">M</div>
+    <span>MOCHA</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+
+    <a href="#home" class="logo">
+      <span>M</span>
+      Mocha
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#menu">Collections</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <button class="search-btn" id="searchBtn">
+        🔍
+      </button>
+
+      <button class="cart-btn" id="cartBtn">
+        🛒 Cart
+        <b id="cartCount">0</b>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content reveal">
+
+      <p class="eyebrow">
+        EST. 2016 · PREMIUM DINING
+      </p>
+
+      <h1>
+        Taste the
+        <em>Extraordinary.</em>
+      </h1>
+
+      <p>
+        Thoughtfully crafted dishes, artisanal coffee
+        and unforgettable moments — all under one roof.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#menu" class="btn btn-primary">
+          Explore Menu →
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Reserve a Table
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-badge">
+      Chef<br>
+      <strong>Special</strong><br>
+      Since 2016
+    </div>
+
+    <div class="scroll">
+      SCROLL ↓
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="intro section">
+
+    <div class="intro-image reveal">
+
+      <img
+        src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85"
+        alt="Restaurant food"
+      >
+
+    </div>
+
+    <div class="intro-content reveal">
+
+      <p class="eyebrow">
+        WELCOME TO MOCHA
+      </p>
+
+      <h2>
+        Where every plate tells a
+        <em>story.</em>
+      </h2>
+
+      <p>
+        From the first aroma of freshly brewed coffee to the
+        final spoonful of dessert, Mocha brings together bold
+        flavors, fresh ingredients and modern culinary craft.
+      </p>
+
+      <a href="#about" class="text-link">
+        Discover our story →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- MENU -->
+  <section class="menu-section section" id="menu">
+
+    <div class="section-heading reveal">
+
+      <div>
+
+        <p class="eyebrow">
+          OUR COLLECTIONS
+        </p>
+
+        <h2>
+          A menu made for
+          <em>moments.</em>
+        </h2>
+
+      </div>
+
+      <p>
+        Comfort classics, chef creations and little
+        indulgences — made fresh to order.
+      </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="search-box" id="searchBox">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search dishes..."
+      >
+
+      <button id="closeSearch">
+        ✕
+      </button>
+
+    </div>
+
+
+    <!-- CATEGORIES -->
+    <div class="categories" id="categories"></div>
+
+
+    <!-- PRODUCTS -->
+    <div class="product-grid" id="productGrid"></div>
+
+  </section>
+
+
+  <!-- CHEF SPECIAL -->
+  <section class="chef-special section">
+
+    <div class="chef-content reveal">
+
+      <p class="eyebrow">
+        FROM THE CHEF
+      </p>
+
+      <h2>
+        The Mocha
+        <em>Signature.</em>
+      </h2>
+
+      <p>
+        Truffle mushroom pasta, parmesan cream,
+        roasted garlic and fresh herbs.
+      </p>
+
+      <div class="special-price">
+        ₹549
+        <del>₹649</del>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        onclick="addProduct(1)"
+      >
+        Add to Cart +
+      </button>
+
+    </div>
+
+    <div class="chef-image reveal">
+
+      <img
+        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=85"
+        alt="Chef special pasta"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+
+    <div class="section-heading centered reveal">
+
+      <p class="eyebrow">
+        OUR STORY
+      </p>
+
+      <h2>
+        Made with passion,
+        served with <em>heart.</em>
+      </h2>
+
+      <p>
+        Mocha started with a simple belief:
+        dining should feel special, even on an ordinary day.
+      </p>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div class="stat reveal">
+        <strong data-target="50">0</strong>
+        <span>Signature Dishes</span>
+      </div>
+
+      <div class="stat reveal">
+        <strong data-target="10">0</strong>
+        <span>Years Experience</span>
+      </div>
+
+      <div class="stat reveal">
+        <strong data-target="20">0</strong>
+        <span>Thousand Guests</span>
+      </div>
+
+      <div class="stat reveal">
+        <strong data-target="49">0</strong>
+        <span>Rating</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="gallery-section section" id="gallery">
+
+    <div class="section-heading centered reveal">
+
+      <p class="eyebrow">
+        THE MOCHA EXPERIENCE
+      </p>
+
+      <h2>
+        Moments worth
+        <em>sharing.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <button class="gallery-item large">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+          alt="Restaurant interior"
+        >
+      </button>
+
+      <button class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+          alt="Pizza"
+        >
+      </button>
+
+      <button class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+          alt="Coffee"
+        >
+      </button>
+
+      <button class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+          alt="Dessert"
+        >
+      </button>
+
+      <button class="gallery-item large">
+        <img
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85"
+          alt="Restaurant food"
+        >
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+
+    <div class="section-heading centered reveal">
+
+      <p class="eyebrow">
+        GUEST LOVE
+      </p>
+
+      <h2>
+        Words from our
+        <em>table.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="testimonial-card reveal">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <p id="reviewText">
+        “Every detail feels intentional.
+        The food, ambience and coffee were exceptional.”
+      </p>
+
+      <strong id="reviewName">
+        Rajveer Arya
+      </strong>
+
+      <span id="reviewRole">
+        Weekend Guest
+      </span>
+
+      <div class="slider-buttons">
+
+        <button id="prevReview">
+          ←
+        </button>
+
+        <button id="nextReview">
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+
+    <div class="contact-grid">
+
+      <div class="contact-content reveal">
+
+        <p class="eyebrow">
+          COME SAY HELLO
+        </p>
+
+        <h2>
+          Your table is
+          <em>waiting.</em>
+        </h2>
+
+        <p>
+          Join us for a relaxed coffee,
+          celebratory dinner or simply something delicious.
+        </p>
+
+
+        <div class="contact-details">
+
+          <div>
+            <span>LOCATION</span>
+            <p>
+              12 Riverside Avenue,
+              Patna, Bihar
+            </p>
+          </div>
+
+          <div>
+            <span>OPENING HOURS</span>
+            <p>
+              Mon – Sun · 11:00 AM – 11:00 PM
+            </p>
+          </div>
+
+          <div>
+            <span>CONTACT</span>
+            <p>
+              +91 99999 99999
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <form class="contact-form reveal" id="contactForm">
+
+        <input
+          type="text"
+          placeholder="Your name"
+          required
+        >
+
+        <input
+          type="email"
+          placeholder="Email address"
+          required
+        >
+
+        <input
+          type="tel"
+          placeholder="Phone number"
+        >
+
+        <textarea
+          rows="5"
+          placeholder="Your message..."
+          required
+        ></textarea>
+
+        <button class="btn btn-primary">
+          Send Enquiry →
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div>
+
+      <a href="#home" class="logo">
+        <span>M</span>
+        Mocha
+      </a>
+
+      <p>
+        Taste the Extraordinary.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+
+    </div>
+
+    <div class="socials">
+
+      <a href="#">IG</a>
+      <a href="#">FB</a>
+      <a href="#">WA</a>
+
+    </div>
+
+    <small>
+      © 2026 Mocha. All Rights Reserved.
+    </small>
+
+  </footer>
+
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+
+    <a href="#home">
+      🏠
+      <span>Home</span>
+    </a>
+
+    <a href="#menu">
+      🍽️
+      <span>Menu</span>
+    </a>
+
+    <button id="mobileCart">
+      🛒
+      <b id="mobileCartCount">0</b>
+      <span>Cart</span>
+    </button>
+
+    <a href="#contact">
+      ✉️
+      <span>Contact</span>
+    </a>
+
+  </nav>
+
+
+  <!-- WHATSAPP -->
+  <button class="whatsapp" id="whatsappBtn">
+    💬
+    <span>Order on WhatsApp</span>
+  </button>
+
+
+  <!-- BACK TOP -->
+  <button class="back-top" id="backTop">
+    ↑
+  </button>
+
+
+  <!-- CART -->
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="drawer-header">
+
+      <h3>Your Cart</h3>
+
+      <button id="closeCart">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">
+          ₹0
+        </strong>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        id="orderCart"
+      >
+        Order on WhatsApp →
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+      <button class="modal-close">
+        ✕
+      </button>
+
+      <img id="modalImage" alt="">
+
+      <div>
+
+        <p class="eyebrow" id="modalCategory"></p>
+
+        <h2 id="modalName"></h2>
+
+        <p id="modalDescription"></p>
+
+        <strong id="modalPrice"></strong>
+
+        <button
+          class="btn btn-primary"
+          id="modalAdd"
+        >
+          Add to Cart +
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+
+    <button id="lightboxClose">
+      ✕
+    </button>
+
+    <img id="lightboxImg" alt="Gallery">
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
